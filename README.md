@@ -15,8 +15,12 @@ A ZShell theme I modified for my personal use. Primarily ripped off from the [af
 wget https://raw.githubusercontent.com/wunderhund/dotfiles/master/craig-magic.zsh-theme -O ~/.oh-my-zsh/themes/craig-magic.zsh-theme
 ```
 3. Open `~/.zshrc` in a text editor of your choice.
-    * Find the line with `ZSH_THEME=` and replace it with `ZSH_THEME="craig-magic"`.
+    * Find the line with `ZSH_THEME=` and replace it with `ZSH_THEME="craig-magic"`:
+    ```
+    sed -i".orig" 's/ZSH_THEME=".*"/ZSH_THEME="craig-magic"/' ~/.zshrc
+    ```
     * Find the `plugins=( )` array and add `virtualenv` to it (if you use virtualenv).
 4. Save and exit your text editor.
 5. Run `source ~/.zshrc` to reload your shell.
 6. Enjoy!
+
